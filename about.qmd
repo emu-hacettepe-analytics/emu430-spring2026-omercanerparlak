@@ -5,26 +5,42 @@ sidebar: false
 
 # Education
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - ongoing.
+-   Orta Doğu Science High School, Turkey, 2016 – 2020
 
 # Work Experience
 
-## Employements
-
-1.  Firm xxx, position xx, year xxx
-
-2.  Firm yyy, position yyy, year yyy
-
 ## Internships
 
-1.  Firm aaa, position xx, year xxx
+-   Garanti BBVA, Financial Planning & Analysis Intern, 2024 - ongoing.\
+    Supporting financial analysis, reporting and data-based decision processes.
 
-2.  Firm bbb, position yyy, year yyy
+-   Garanti BBVA, Global Markets Intern, 2023-2024 \
+    Gaining experience in financial markets, investment products and market analysis.
+
+## Community Experience
+
+-   **Hacettepe Industrial and Systems Society – Vice President, 2022–2023**\
+    Took an active role in organizing events and managing community activities. Contributed to event planning, coordination, and taking responsibility in various student initiatives.
 
 # Projects
 
+-   Demand Forecasting Graduation Project (with Mavi)
+
+    Currently working on a demand forecasting project as part of my graduation project. Our team is collaborating with Mavi and analyzing sales data to better understand demand patterns.
+
+-   Garanti BBVA Fikrinle Parla Competition
+
+    Working with my team on a project for the Fikrinle Parla competition organized by Garanti BBVA.
+
 # Competencies
 
-R, Quarto, Git, Python
+R, Python, SQL, Microsoft Excel, Business Objects, Data Analysis, Git
 
 # Hobbies
+
+Basketball, following financial markets, traveling, and watching movies.
+
+# CV
+
+You can view my CV here: [My CV](ÖmerCanerParlak_CV_.pdf)

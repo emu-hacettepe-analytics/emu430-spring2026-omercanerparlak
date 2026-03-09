@@ -3,10 +3,10 @@ title: "Welcome to My Analytics Lab"
 sidebar: false 
 ---
 
-Hello! My name is xxx xxxx.
+Hello! My name is Ömer Caner Parlak.
 
-This is my personal webpage.
+I am a student in the Department of Industrial Engineering at Hacettepe University.
 
-Please stay tuned to follow my works on data analytics, blog posts, and more.
+This website was created for the EMU430 course. Here, I share my assignments, course-related work, and project pages.
 
-This is our template.
+I will continue updating this website throughout the semester.

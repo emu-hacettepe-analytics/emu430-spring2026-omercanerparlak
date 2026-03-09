@@ -10,6 +10,136 @@ title: "Assignment 1"
 
 My first assignment has two parts.
 
-## (a)
+# A.Video Summary 
 
-## (b)
+In the video, Baykal Hafızoğlu talks about how analytics is used in real industry problems. He explains that analytics can be separated into four stages: descriptive, diagnostic, predictive, and prescriptive analytics. He also says that topics we study in industrial engineering, like statistics, machine learning, and optimization, are often used together in real projects. Another point he mentions is that defining the problem clearly is very important in analytics work. He also explains that building a model is not enough. The model should also be implemented in a system so that people in a company can actually use it.
+
+#### Open-ended Question
+
+-   Why is it not enough to only build an analytics model, and what else is needed for it to be useful in real companies?
+
+Building an analytics model alone is not enough because the model must be usable in real business processes. If the model is only theoretical, companies cannot benefit from it. For an analytics model to create value, it should be integrated into a system that employees can use in their daily work. This allows companies to make better decisions based on data and apply the results of the model in real operations.
+
+#### Multiple Choice Question
+
+According to Baykal Hafızoğlu, what is one important requirement for an analytics model to create value in a company?
+
+A\) It should only use complex machine learning algorithms\
+B) It should be integrated into a system that real users can use\
+C) It should only focus on theoretical accuracy\
+D) It should ignore user feedback
+
+**Correct Answer: B**
+
+# B.Data Analysis
+
+First, I define my name and birth year as variables. These values will be used later in the calculations.
+
+```{r}
+my_first <- "Caner"
+my_birth_year <- 2002
+```
+
+Then I calculate the value k using the formula given in the assignment.\
+This formula ensures that the value of k will be between 8 and 22.
+
+```{r}
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+k
+```
+
+Next, I load the dataset from the dslabs package.\
+This dataset contains information about the 2016 US election polls.
+
+```{r}
+library(dslabs)
+data("polls_us_election_2016")
+```
+
+Then I store the dataset in a variable so I can work with it.
+
+```{r}
+df <- polls_us_election_2016
+```
+
+According to the rule in the assignment, I display k rows from the dataset.\
+If k is even, I display the first k rows.\
+If k is odd, I display the last k rows.
+
+```{r}
+if (k %% 2 == 0) {
+  head(df, k)
+} else {
+  tail(df, k)
+}
+```
+
+Next, I calculate the total number of missing values (NA) in the dataset.
+
+```{r}
+sum(is.na(df))
+```
+
+Then I calculate the number of missing values in each column and sort them from largest to smallest.
+
+```{r}
+na_counts <- sort(colSums(is.na(df)), decreasing = TRUE)
+na_counts
+```
+
+Now I display the top 8 colmns with the highest number of missing values.
+
+```{r}
+head(na_counts, 8)
+```
+
+After that, I create a new copy of the dataset.\
+This way, the original dataset remains unchanged.
+
+```{r}
+new_data <- df
+```
+
+Next, I replace the missing values in the dataset.
+
+-   If the column is numeric, I replace `NA` with `my_birth_year + k`
+-   If the column is character, I replace `NA` with `"my_first_k"`
+-   If the column is factor, I first convert it to character and then replace `NA` values
+
+```{r}
+for (i in seq_along(new_data)) {
+  
+  if (is.numeric(new_data[[i]])) {
+    new_data[[i]][is.na(new_data[[i]])] <- my_birth_year + k
+  } else if (is.character(new_data[[i]])) {
+    new_data[[i]][is.na(new_data[[i]])] <- paste0(my_first, "_", k)
+  } else if (is.factor(new_data[[i]])) {
+    new_data[[i]] <- as.character(new_data[[i]])
+    new_data[[i]][is.na(new_data[[i]])] <- paste0(my_first, "_", k)
+  }
+}
+```
+
+Now I again display k rows from the updated dataset using the same rule.
+
+```{r}
+if (k %% 2 == 0) {
+  head(new_data, k)
+} else {
+  tail(new_data, k)
+}
+```
+
+Next, I calculate the remaining number of `NA` values in the updated dataset.
+
+```{r}
+sum(is.na(new_data))
+```
+
+Finally, I check whether there are any `NA` values left in the dataset.
+
+```{r}
+anyNA(new_data)
+```
+
+Note: At first, assigning a new value directly to factor columns created additional NA values. Therefore, factor columns were converted to character before replacing missing values. While writing the code, I encountered several issues and the final check (anyNA(new_data)) was repeatedly returning TRUE. I consulted AI tools for help in debugging the code and identifying the source of the problem. After correcting the factor handling, the result returned FALSE.
