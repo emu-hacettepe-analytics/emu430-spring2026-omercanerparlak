@@ -15,7 +15,7 @@ sidebar: false
 -   Garanti BBVA, Financial Planning & Analysis Intern, 2024 - ongoing.\
     Supporting financial analysis, reporting and data-based decision processes.
 
--   Garanti BBVA, Global Markets Intern, 2023-2024 \
+-   Garanti BBVA, Global Markets Intern, 2023-2024\
     Gaining experience in financial markets, investment products and market analysis.
 
 ## Community Experience
@@ -41,6 +41,6 @@ R, Python, SQL, Microsoft Excel, Business Objects, Data Analysis, Git
 
 Basketball, following financial markets, traveling, and watching movies.
 
-# CV
+## CV
 
-You can view my CV here: [My CV](ÖmerCanerParlak_CV_.pdf)
+You can view my CV here: [My CV](ÖmerCanerParlak_Cv.pdf)

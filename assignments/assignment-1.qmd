@@ -2,15 +2,9 @@
 title: "Assignment 1"
 ---
 
-# Assignment 1
-
-```{r}
-1 + 1
-```
-
 My first assignment has two parts.
 
-# A.Video Summary 
+# A.Video Summary
 
 In the video, Baykal Hafızoğlu talks about how analytics is used in real industry problems. He explains that analytics can be separated into four stages: descriptive, diagnostic, predictive, and prescriptive analytics. He also says that topics we study in industrial engineering, like statistics, machine learning, and optimization, are often used together in real projects. Another point he mentions is that defining the problem clearly is very important in analytics work. He also explains that building a model is not enough. The model should also be implemented in a system so that people in a company can actually use it.
 
